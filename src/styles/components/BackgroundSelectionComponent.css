@@ -1,0 +1,23 @@
+.background-selection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    /* Center the color options */
+    margin: 20px 0;
+}
+
+.color-option {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    transition: transform 0.3s, border 0.3s;
+    border-radius: 5px;
+    /* Rounded corners for better aesthetics */
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+    border: 2px solid #000;
+}
