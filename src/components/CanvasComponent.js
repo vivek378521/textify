@@ -16,9 +16,9 @@ const CanvasComponent = forwardRef(({ text, title, subtitle, date, background, f
         canvas.setBackgroundColor(background, canvas.renderAll.bind(canvas));
 
         const titleText = new fabric.Text(title, { top: 50, left: 50, fontSize: 30, fill: fontColor });
-        const subtitleText = new fabric.Text(subtitle, { top: 100, left: 50, fontSize: 20, fill: fontColor });
-        const mainText = new fabric.Text(text, { top: 150, left: 50, fontSize: 16, fill: fontColor });
-        const dateText = new fabric.Text(date, { top: 200, left: 50, fontSize: 14, fill: fontColor });
+        const subtitleText = new fabric.Text(subtitle, { top: titleText.top + titleText.height + 10, left: 50, fontSize: 20, fill: fontColor });
+        const mainText = new fabric.Text(text, { top: subtitleText.top + subtitleText.height + 10, left: 50, fontSize: 16, fill: fontColor });
+        const dateText = new fabric.Text(date, { top: mainText.top + mainText.height + 10, left: 50, fontSize: 14, fill: fontColor });
 
         canvas.add(titleText, subtitleText, mainText, dateText);
 
