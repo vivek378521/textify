@@ -2,6 +2,8 @@ import React, { useLayoutEffect, useRef, useState, useEffect, forwardRef, useImp
 import { fabric } from 'fabric';
 import '../styles/components/CanvasComponent.css';
 
+import DownloadButtonComponent from './DownloadButtonComponent';
+
 const CanvasComponent = forwardRef(({ text, title, subtitle, date, background, fontColor }, ref) => {
     const canvasRef = useRef(null);
     const [canvasLoaded, setCanvasLoaded] = useState(false);
@@ -36,9 +38,12 @@ const CanvasComponent = forwardRef(({ text, title, subtitle, date, background, f
     }, [canvasLoaded]);
 
     return (
-        <div>
-            <canvas ref={canvasRef} width="800" height="600" style={{ display: canvasLoaded ? 'block' : 'none' }}></canvas>
-        </div>
+        <React.Fragment>
+            <div>
+                <canvas ref={canvasRef} width="800" height="600" style={{ display: canvasLoaded ? 'block' : 'none' }}></canvas>
+            </div>
+            <DownloadButtonComponent canvasRef={canvasRef} />
+        </React.Fragment>
     );
 });
 

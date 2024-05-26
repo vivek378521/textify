@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import TextInputComponent from './components/TextInputComponent';
 import BackgroundSelectionComponent from './components/BackgroundSelectionComponent';
 import CanvasComponent from './components/CanvasComponent';
-import DownloadButtonComponent from './components/DownloadButtonComponent';
+//import DownloadButtonComponent from './components/DownloadButtonComponent';
 import './App.css';
 
 function App() {
@@ -36,7 +36,6 @@ function App() {
         fontColor={fontColor}
         ref={canvasRef}
       />
-      <DownloadButtonComponent canvas={canvasRef} />
     </div>
   );
 }
