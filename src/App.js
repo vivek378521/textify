@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>Custom Text Background Generator</h1>
+      <h1>Imagify</h1>
       <TextInputComponent
         setText={setText}
         setTitle={setTitle}
